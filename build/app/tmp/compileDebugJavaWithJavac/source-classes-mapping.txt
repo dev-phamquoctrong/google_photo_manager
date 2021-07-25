@@ -1,0 +1,6 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/hiko/gallery_photos/MainActivity.java
+ com.hiko.gallery_photos.MainActivity
+com/hiko/gallery_photos/BuildConfig.java
+ com.hiko.gallery_photos.BuildConfig
