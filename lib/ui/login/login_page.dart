@@ -47,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget get _buildConnectButton => TextButton(
       style: ButtonStyle(
           backgroundColor:
-              MaterialStateColor.resolveWith((states) => Colors.green)),
+              MaterialStateColor.resolveWith((states) => Colors.blue)),
       onPressed: () async {
         await this.onClickLogin();
       },
@@ -57,39 +57,43 @@ class _LoginPageState extends State<LoginPage> {
       ));
 
   GoogleSignIn get _googleSignIn => GoogleSignIn(
-    scopes: [
-      'email',
-      'https://www.googleapis.com/auth/photoslibrary.readonly',
-      'https://www.googleapis.com/auth/photoslibrary.appendonly',
-      'https://www.googleapis.com/auth/photoslibrary.edit.appcreateddata'
-    ],
-  );
+        scopes: [
+          'email',
+          'https://www.googleapis.com/auth/photoslibrary.readonly',
+          'https://www.googleapis.com/auth/photoslibrary.appendonly',
+          'https://www.googleapis.com/auth/photoslibrary.edit.appcreateddata'
+        ],
+      );
 
   Future<GoogleSignInAccount?> _handleSignIn() async {
     GoogleSignInAccount? result;
     try {
-      result =  await _googleSignIn.signIn();
-      final Map<String, dynamic>? authHeader = await result?.authHeaders;
+      result = await _googleSignIn.signIn();
     } catch (error) {
       print(error);
     }
     return result;
   }
 
-  Future<void> onClickLogin()async {
+  Future<void> onClickLogin() async {
     GoogleSignInAccount? result = await this._handleSignIn();
-    if(result != null){
-      SharedPreferences sharedPreference = await SharedPreferences.getInstance();
+    if (result != null) {
+      SharedPreferences sharedPreference =
+          await SharedPreferences.getInstance();
       final _header = await result.authHeaders;
       sharedPreference.setString("auth", json.encode(_header));
       print("============ ${_header.toString()}");
-      Navigator.push(context, MaterialPageRoute(builder: (context) => AlbumsPage(googleSignInAccount: result)));
-    }else{
-      showDialog(context: context, builder: (context) => AlertDialog(
-        title: Text("Error"),
-        content: Text("Authentication error"),
-      ));
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => AlbumsPage(googleSignInAccount: result)));
+    } else {
+      showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+                title: Text("Error"),
+                content: Text("Authentication error"),
+              ));
     }
   }
-
 }

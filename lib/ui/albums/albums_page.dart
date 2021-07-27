@@ -2,9 +2,12 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:gallery_photos/response/album_response.dart';
+import 'package:gallery_photos/ui/media/create_album_page.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../loading_dialog.dart';
 
 class AlbumsPage extends StatefulWidget {
   const AlbumsPage({Key? key, @required this.googleSignInAccount})
@@ -21,12 +24,16 @@ class _AlbumsPageState extends State<AlbumsPage> {
   @override
   void initState() {
     super.initState();
-    _getData();
+    WidgetsBinding.instance?.addPostFrameCallback((timeStamp) {
+      this._getData();
+    });
   }
 
-  void _getData() async {
+  Future<void> _getData() async {
+    this._showLoading();
     albums = await this._getAlbums();
-    setState(() {});
+    this.setState(() {});
+    this._closeLoading();
   }
 
   @override
@@ -38,7 +45,17 @@ class _AlbumsPageState extends State<AlbumsPage> {
           style: TextStyle(
               color: Colors.white, fontSize: 16, fontWeight: FontWeight.w500),
         ),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blue,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          bool result = await Navigator.push(context,
+              MaterialPageRoute(builder: (context) => CreateAlbumPage()));
+          if (result) {
+            await this._getData();
+          }
+        },
+        child: Icon(Icons.add),
       ),
       body: SafeArea(
         child: albums.isNotEmpty
@@ -54,7 +71,7 @@ class _AlbumsPageState extends State<AlbumsPage> {
                             crossAxisCount: 2,
                             mainAxisSpacing: 12,
                             crossAxisSpacing: 12,
-                            childAspectRatio: 0.5),
+                            childAspectRatio: 1 / 1.2),
                         itemBuilder: (context, position) =>
                             _buildItem(albums[position])),
                   ),
@@ -68,15 +85,19 @@ class _AlbumsPageState extends State<AlbumsPage> {
   Widget _buildItem(Albums albums) => Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Image.network(
-            albums.coverPhotoBaseUrl ?? "",
-            fit: BoxFit.cover,
+          AspectRatio(
+            aspectRatio: 1,
+            child: Image.network(
+              albums.coverPhotoBaseUrl ?? "",
+              fit: BoxFit.cover,
+            ),
           ),
           SizedBox(
             height: 8,
           ),
           Text(
             albums.title ?? "",
+            maxLines: 1,
             style: TextStyle(
                 color: Color(0xff666666),
                 fontSize: 14,
@@ -100,5 +121,13 @@ class _AlbumsPageState extends State<AlbumsPage> {
           .toList();
     }
     return _result;
+  }
+
+  void _showLoading() {
+    showDialog(context: context, builder: (context) => LoadingDialog());
+  }
+
+  void _closeLoading() {
+    Navigator.pop(context);
   }
 }

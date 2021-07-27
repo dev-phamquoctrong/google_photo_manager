@@ -87,44 +87,62 @@
 61            android:value="2" />
 61-->D:\Working\Others\gallery_photos\android\app\src\main\AndroidManifest.xml:39:13-30
 62
-63        <activity
-63-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:23:9-27:75
-64            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-64-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:24:13-93
-65            android:excludeFromRecents="true"
-65-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:25:13-46
+63        <provider
+63-->[:image_picker] D:\Working\Others\gallery_photos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
+64            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+64-->[:image_picker] D:\Working\Others\gallery_photos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-82
+65            android:authorities="com.hiko.gallery_photos.flutter.image_provider"
+65-->[:image_picker] D:\Working\Others\gallery_photos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-74
 66            android:exported="false"
-66-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:26:13-37
-67            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-67-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:27:13-72
-68        <!--
-69            Service handling Google Sign-In user revocation. For apps that do not integrate with
-70            Google Sign-In, this service will never be started.
-71        -->
-72        <service
-72-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:33:9-36:110
-73            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-73-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:34:13-89
-74            android:exported="true"
-74-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:35:13-36
-75            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
-75-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:36:13-107
-76
-77        <activity
-77-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\36c5e44624df30227212e363d1b7383f\jetified-play-services-base-16.0.1\AndroidManifest.xml:23:9-26:75
-78            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-78-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\36c5e44624df30227212e363d1b7383f\jetified-play-services-base-16.0.1\AndroidManifest.xml:24:13-79
-79            android:exported="false"
-79-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\36c5e44624df30227212e363d1b7383f\jetified-play-services-base-16.0.1\AndroidManifest.xml:25:13-37
-80            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-80-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\36c5e44624df30227212e363d1b7383f\jetified-play-services-base-16.0.1\AndroidManifest.xml:26:13-72
-81
-82        <meta-data
-82-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\4555f21f7c1541f2f5df39aaa77414ec\jetified-play-services-basement-16.0.1\AndroidManifest.xml:23:9-25:69
-83            android:name="com.google.android.gms.version"
-83-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\4555f21f7c1541f2f5df39aaa77414ec\jetified-play-services-basement-16.0.1\AndroidManifest.xml:24:13-58
-84            android:value="@integer/google_play_services_version" />
-84-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\4555f21f7c1541f2f5df39aaa77414ec\jetified-play-services-basement-16.0.1\AndroidManifest.xml:25:13-66
-85    </application>
+66-->[:image_picker] D:\Working\Others\gallery_photos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-37
+67            android:grantUriPermissions="true" >
+67-->[:image_picker] D:\Working\Others\gallery_photos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-47
+68            <meta-data
+68-->[:image_picker] D:\Working\Others\gallery_photos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:75
+69                android:name="android.support.FILE_PROVIDER_PATHS"
+69-->[:image_picker] D:\Working\Others\gallery_photos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
+70                android:resource="@xml/flutter_image_picker_file_paths" />
+70-->[:image_picker] D:\Working\Others\gallery_photos\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-72
+71        </provider>
+72
+73        <activity
+73-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:23:9-27:75
+74            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+74-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:24:13-93
+75            android:excludeFromRecents="true"
+75-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:25:13-46
+76            android:exported="false"
+76-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:26:13-37
+77            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+77-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:27:13-72
+78        <!--
+79            Service handling Google Sign-In user revocation. For apps that do not integrate with
+80            Google Sign-In, this service will never be started.
+81        -->
+82        <service
+82-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:33:9-36:110
+83            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+83-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:34:13-89
+84            android:exported="true"
+84-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:35:13-36
+85            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+85-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\8171cd647837a8858673fe76903de484\jetified-play-services-auth-16.0.1\AndroidManifest.xml:36:13-107
 86
-87</manifest>
+87        <activity
+87-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\36c5e44624df30227212e363d1b7383f\jetified-play-services-base-16.0.1\AndroidManifest.xml:23:9-26:75
+88            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+88-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\36c5e44624df30227212e363d1b7383f\jetified-play-services-base-16.0.1\AndroidManifest.xml:24:13-79
+89            android:exported="false"
+89-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\36c5e44624df30227212e363d1b7383f\jetified-play-services-base-16.0.1\AndroidManifest.xml:25:13-37
+90            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+90-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\36c5e44624df30227212e363d1b7383f\jetified-play-services-base-16.0.1\AndroidManifest.xml:26:13-72
+91
+92        <meta-data
+92-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\4555f21f7c1541f2f5df39aaa77414ec\jetified-play-services-basement-16.0.1\AndroidManifest.xml:23:9-25:69
+93            android:name="com.google.android.gms.version"
+93-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\4555f21f7c1541f2f5df39aaa77414ec\jetified-play-services-basement-16.0.1\AndroidManifest.xml:24:13-58
+94            android:value="@integer/google_play_services_version" />
+94-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\pqtrong17\.gradle\caches\transforms-2\files-2.1\4555f21f7c1541f2f5df39aaa77414ec\jetified-play-services-basement-16.0.1\AndroidManifest.xml:25:13-66
+95    </application>
+96
+97</manifest>
